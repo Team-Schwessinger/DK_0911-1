@@ -12,6 +12,7 @@
 • Discovered bug in fasta files, where identifier for reassigned contigs was 'hcontig_033_100 pcontig_100' or 'hcontig_074_103 reverse complement'. This was changed.
 • Furthermore, one contig was manually reassigned as its reverse complement, but this manual reverse complementing would not make the contig compatible with the gff3 file. Thus, this was changed back.
 • Bug-fixed fasta files
+• from DK_0911_generate_fasta_files_from_gff3, fasta files for both proteins and genes had the same identifier (evm.model.xxx) which is incompatible with DK_0911_defining_alleles. Changed DK_0911_dictionaries to name genes evm.TU.xxx and protein evm.model.xxx.
 # genome v04 = manual reassignment of pwoh as pwh + filtered out transposable elements
 
 Script running order:
