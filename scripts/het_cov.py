@@ -18,6 +18,7 @@ from sklearn.externals.joblib import Parallel, delayed
 import itertools as it
 from scipy.signal import argrelextrema
 import scipy
+from pybedtools import BedTool
 
 
 def run_command(command):
@@ -29,6 +30,10 @@ def run_command(command):
     
 def hello_print(command_list):
     print(command_list)
+
+def df_to_tab(df, fn):
+    """Takes a df and a filename to save it out as tab seperated file."""
+    df.to_csv(fn, header=None, index=None, sep='\t')
 
 def faidx_genome(genome_fn, contig_fn):
     '''Generates a genome file used for samtools and such if not already present.
@@ -56,7 +61,7 @@ def sort_gff_file(gff_fn):
     run_command(sort_command)
     return out_fn
 
-def bed_file_split(bed_fn, num_chunks, tmp_path = TMP_PATH):
+def bed_file_split(bed_fn, num_chunks, tmp_path):
     '''Splits a bedfile into even chunks of files plus the reads. Each file having the same number of lines.
     Input:
     bed file name abspath
@@ -102,7 +107,7 @@ def bed_file_split(bed_fn, num_chunks, tmp_path = TMP_PATH):
     files.append(temp_fn)
     return files
 
-def samcov_file_split(basefile_name, chunks, tmp_path = TMP_PATH):
+def samcov_file_split(basefile_name, chunks, tmp_path):
     """This function takes the samcov file and generates the split filenames necessary to run the 
     parallelized run_sam_bedcov."""
     chunk_base_name = os.path.join(tmp_path, os.path.basename(basefile_name))
@@ -290,7 +295,7 @@ def fill_plot_axis(xs, ys, ax, color, alpha=0.5):
     ax.fill_between(xs, ys, where=ys>=d, interpolate=True, color=color, alpha=alpha)
     return ax
 
-def plot_mapping_annotation(ax, pallete, xstart_text, y_upper_lim):
+def plot_mapping_annotation(fig, ax, pallete, xstart_text, y_upper_lim):
     """Function that plots the legend text for each feature"""
     xincremend = xstart_text/20
     y_upper_spot = y_upper_lim/1.2
