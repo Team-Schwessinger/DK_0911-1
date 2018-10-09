@@ -297,6 +297,7 @@ def fill_plot_axis(xs, ys, ax, color, alpha=0.5):
 
 def plot_mapping_annotation(fig, ax, pallete, xstart_text, y_upper_lim):
     """Function that plots the legend text for each feature"""
+    #add a quick check to see if pallete has one or multiple colors.
     xincremend = xstart_text/20
     y_upper_spot = y_upper_lim/1.2
     yinremend = y_upper_lim/10
@@ -369,7 +370,76 @@ def plot_mapping_annotation(fig, ax, pallete, xstart_text, y_upper_lim):
     ax[0,1].text(0, y_upper_lim/3, text)
     
     return ax
+
+
+def plot_mapping_annotation_wtext(fig, ax, pallete, xstart_text, y_upper_lim, legend_text):
+    """Function that plots the legend text for each feature"""
+    #add a quick check to see if pallete has one or multiple colors.
+    xincremend = xstart_text/20
+    y_upper_spot = y_upper_lim/1.2
+    yinremend = y_upper_lim/10
+    ax[0,0].text(xstart_text, y_upper_lim/1.05, 'ref = primary contigs')
+    ax[0,0].plot([xstart_text*1.1, xstart_text+(7*xincremend)], [y_upper_spot, y_upper_spot], lw =4, color = pallete[0])
+    ax[0,0].text(xstart_text*0.97, y_upper_spot*0.98, 'p')
+
+
+    #now plot the ph mapping with primeray mapping only
+    ax[1,0].text(xstart_text, y_upper_lim/1.05, 'ref = primary contigs + haplotigs')
+    ax[1,0].plot([xstart_text*1.1, xstart_text+(7*xincremend)], [y_upper_spot, y_upper_spot], lw =4, color = pallete[1])
+    ax[1,0].text(xstart_text*0.97, y_upper_spot*0.98, 'p')
+    ax[1,0].plot([xstart_text*1.1, xstart_text+(3*xincremend)], [y_upper_spot*0.85, y_upper_spot*0.85], lw =4, color = 'k')
+    ax[1,0].plot([xstart_text+(5*xincremend), xstart_text+(7*xincremend)], [y_upper_spot*0.85, y_upper_spot*0.85], lw =4, color = 'k')
+    ax[1,0].text(xstart_text*0.97, y_upper_spot*0.98*0.85, 'h')
+
+
+
+    #now plot the ph mapping with haplotig mapping only
+
+
+    ax[2,0].text(xstart_text, y_upper_lim/1.05, 'ref = primary contigs + haplotigs')
+    ax[2,0].plot([xstart_text*1.1, xstart_text+(7*xincremend)], [y_upper_spot, y_upper_spot], lw =4, color = 'k')
+    ax[2,0].text(xstart_text*0.97, y_upper_spot*0.98, 'p')
+    ax[2,0].plot([xstart_text*1.1, xstart_text+(3*xincremend)], [y_upper_spot*0.85, y_upper_spot*0.85], lw =4, color = pallete[2])
+    ax[2,0].plot([xstart_text+(5*xincremend), xstart_text+(7*xincremend)], [y_upper_spot*0.85, y_upper_spot*0.85], lw =4, color = pallete[2])
+    ax[2,0].text(xstart_text*0.97, y_upper_spot*0.98*0.85, 'h')
+
+
+
+    #now plot the ph mapping with primaries with overlaps
+
+    ax[1,1].text(xstart_text, y_upper_lim/1.05, 'ref = primary contigs + haplotigs')
+    ax[1,1].text(xstart_text, y_upper_lim/1.05, 'ref = primary contigs + haplotigs')
+    ax[1,1].plot([xstart_text*1.1, xstart_text+(7*xincremend)], [y_upper_spot, y_upper_spot], lw =4, color = pallete[3])
+    ax[1,1].plot([xstart_text+(3*xincremend), xstart_text+(5*xincremend)],[y_upper_spot, y_upper_spot] , lw =4, color = 'k')
+    ax[1,1].text(xstart_text*0.97, y_upper_spot*0.98, 'p')
+    ax[1,1].plot([xstart_text*1.1, xstart_text+(3*xincremend)], [y_upper_spot*0.85, y_upper_spot*0.85], lw =4, color = 'k')
+    ax[1,1].plot([xstart_text+(5*xincremend), xstart_text+(7*xincremend)], [y_upper_spot*0.85, y_upper_spot*0.85], lw =4, color = 'k')
+    ax[1,1].text(xstart_text*0.97, y_upper_spot*0.98*0.85, 'h')
+
+
+    #now plot the ph mapping with primaries with overlaps
+
+
+    ax[2,1].text(xstart_text, y_upper_lim/1.05, 'ref = primary contigs + haplotigs')
+    ax[2,1].plot([xstart_text*1.1, xstart_text+(7*xincremend)], [y_upper_spot, y_upper_spot], lw =4, color = 'k')
+    ax[2,1].plot([xstart_text+(3*xincremend), xstart_text+(5*xincremend)],[y_upper_spot, y_upper_spot] , lw =4, color = pallete[4])
+    ax[2,1].text(xstart_text*0.97, y_upper_spot*0.98, 'p')
+    ax[2,1].plot([xstart_text*1.1, xstart_text+(3*xincremend)], [y_upper_spot*0.85, y_upper_spot*0.85], lw =4, color = 'k')
+    ax[2,1].plot([xstart_text+(5*xincremend), xstart_text+(7*xincremend)], [y_upper_spot*0.85, y_upper_spot*0.85], lw =4, color = 'k')
+    ax[2,1].text(xstart_text*0.97, y_upper_spot*0.98*0.85, 'h')
+
+
+    #add the labels
+    fig.text(0.06, 0.5, 'Frequency', ha='center', va='center', rotation='vertical')
+    fig.text(0.5, 0.09, 'Normalized mapping Coverage',ha='center', va='center')
+
+    #make plot [0,1] disappear
+    ax[0,1].axis('off')
+
+    ax[0,1].text(0, y_upper_lim/3, legend_text)
     
+    return ax
+
 def df_to_bed_saved(df, lcutoff, samcov_fn):
     """Function that takes a dataframe, a lowcutoff for the normed coverage, and the samcov file.
     It filters the samcov on the lcutoff in the norm cov column. This is converted to a non-reduntand bed file using
