@@ -67,8 +67,7 @@ Lab Group: Rathjen Lab, Research School of Biology
    - Inputs: **BLAST** & **transposonPSI** DataFrames, .*gff3* files.
    - Programs: N/A
    - Purpose: generate new *gff3* files without transposable elements. After this, re-run code from step 6. `DK_0911_generate_fasta_files_from_gff3` onwards.
-
-
+10. `
 
 ## Genome Versions
 ### genome_v01
