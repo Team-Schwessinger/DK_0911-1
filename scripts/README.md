@@ -6,7 +6,7 @@ Supervisor: **Dr Benjamin Schwessinger**
 
 Lab Group: Rathjen Lab, Research School of Biology
 
-## Scripts - in running order
+## Scripts - in semi running order
 1. `DK_0911_contig_analysis`
    - Inputs: v01 (original) .*fasta* files
    - Programs: **NUCmer** & **MUMmer** (alignment of nucleotide sequences)
@@ -67,9 +67,10 @@ Lab Group: Rathjen Lab, Research School of Biology
    - Inputs: **BLAST** & **transposonPSI** DataFrames, .*gff3* files.
    - Programs: N/A
    - Purpose: generate new *gff3* files without transposable elements. After this, re-run code from step 6. `DK_0911_generate_fasta_files_from_gff3` onwards.
-10. `DK0911_TE_filtering_and_summary_p_contigs_fix.ipynb, DK0911_TE_filtering_and_summary_h_contigs_fix.ipynb, Pst_104E_v14_TE_filtering_and_summary_p_contigs_fix.ipynb, Pst_104E_v13_TE_filtering_and_summary_h_contigs_fix.ipynb`
+   10. `DK0911_TE_filtering_and_summary_p_contigs_fix.ipynb, DK0911_TE_filtering_and_summary_h_contigs_fix.ipynb, Pst_104E_v14_TE_filtering_and_summary_p_contigs_fix.ipynb, Pst_104E_v13_TE_filtering_and_summary_h_contigs_fix.ipynb`
    - TO-DO description
-
+ 11. `DK0911_TE_variation_analysis.ipynb`
+   - TO-DO description
 ## Genome Versions
 ### genome_v01
 * Original genome.
