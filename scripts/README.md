@@ -67,10 +67,13 @@ Lab Group: Rathjen Lab, Research School of Biology
    - Inputs: **BLAST** & **transposonPSI** DataFrames, .*gff3* files.
    - Programs: N/A
    - Purpose: generate new *gff3* files without transposable elements. After this, re-run code from step 6. `DK_0911_generate_fasta_files_from_gff3` onwards.
-   10. `DK0911_TE_filtering_and_summary_p_contigs_fix.ipynb, DK0911_TE_filtering_and_summary_h_contigs_fix.ipynb, Pst_104E_v14_TE_filtering_and_summary_p_contigs_fix.ipynb, Pst_104E_v13_TE_filtering_and_summary_h_contigs_fix.ipynb`
+10. `DK0911_TE_filtering_and_summary_p_contigs_fix.ipynb, DK0911_TE_filtering_and_summary_h_contigs_fix.ipynb, Pst_104E_v14_TE_filtering_and_summary_p_contigs_fix.ipynb, Pst_104E_v13_TE_filtering_and_summary_h_contigs_fix.ipynb`
    - TO-DO description
- 11. `DK0911_TE_variation_analysis.ipynb`
+11. `DK0911_TE_variation_analysis.ipynb`
    - TO-DO description
+   
+12. `Scripts in protein_annotation`
+   - TO-DO
 ## Genome Versions
 ### genome_v01
 * Original genome.
