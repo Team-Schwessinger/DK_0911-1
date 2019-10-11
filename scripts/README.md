@@ -81,6 +81,9 @@ Lab Group: Rathjen Lab, Research School of Biology
    - This notebooks describes the comparative gene pair analysis. The inputs are the outputs of `DK_0911_defining_alleles_v02`, `DK_0911_post_allele_analysis_v02` `Pst_104E_defining_alleles_v02_RT`, and `Pst_104E_defining_alleles_v02_RT`.
    These previous notebooks describe the assignment of alleles and the caculation of different pairwise measures including Levensthein distances and dN/dS ratios.
 
+14. `DK0911_Pst104E_comperative_coverage_analysis`
+   - This notebook plots Figure 2 representing the relative fully phased, homozygous collapsed, and hemizygous regions. It takes the input of `DK0911_SRM_cov_DK0911_on_DK0911` and `Pst_104E_SRM_cov_Pst_104E_on_Pst_104E`
+
 ## Genome Versions
 ### genome_v01
 * Original genome.
