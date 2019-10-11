@@ -76,6 +76,11 @@ Lab Group: Rathjen Lab, Research School of Biology
    
 12. `Scripts in protein_annotation`
    - TO-DO
+   
+13. `DK0911_vs_Pst104E_gene_pair_analysis`
+   - This notebooks describes the comparative gene pair analysis. The inputs are the outputs of `DK_0911_defining_alleles_v02`, `DK_0911_post_allele_analysis_v02` `Pst_104E_defining_alleles_v02_RT`, and `Pst_104E_defining_alleles_v02_RT`.
+   These previous notebooks describe the assignment of alleles and the caculation of different pairwise measures including Levensthein distances and dN/dS ratios.
+
 ## Genome Versions
 ### genome_v01
 * Original genome.
