@@ -27,6 +27,8 @@ Lab Group: Rathjen Lab, Research School of Biology
    - Programs: **NUCmer** (alignment) & **Assemblytics** (detection of variants)
    - Purpose: extract meaningful data pertaining to variants in the genome to be further analysed in `DK_0911_assemblytics_analysis`
    - Notes: added bug-catching function that checks if mapping folders contain all the analytical files that they should, using a notebook `file_counting.ipynb` that can also be imported by other notebooks.
+ `DK_0911_Pst104E_assemblytics_plot`
+   - This notebook generates the combined assemblytics analysis as shown in Figure 1. 
 5. `DK_0911_assemblytics_analysis`
    - Inputs: outputs from `DK_0911_nucmer_and_assemblytics_mapping`
    - Programs: N/A
