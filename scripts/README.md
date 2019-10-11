@@ -95,6 +95,9 @@ Lab Group: Rathjen Lab, Research School of Biology
    
 18. `DK0911_v04_effector_analysis`
    - This notebook generates Supplemental Figure 6 with identical analysis published in mBio https://mBio.asm.org/content/9/1/e02275-17.
+   
+19. `DK0911_tables_and_subfigures`
+   - This notebook is a general utility notebook that helps generating some figures.
 
 ## Genome Versions
 ### genome_v01
