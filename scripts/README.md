@@ -83,6 +83,9 @@ Lab Group: Rathjen Lab, Research School of Biology
 
 14. `DK0911_Pst104E_comperative_coverage_analysis`
    - This notebook plots Figure 2 representing the relative fully phased, homozygous collapsed, and hemizygous regions. It takes the input of `DK0911_SRM_cov_DK0911_on_DK0911` and `Pst_104E_SRM_cov_Pst_104E_on_Pst_104E`
+   
+15. `DK0911v04_Pst104E_presence_absence`
+   - This notebook explores the presence absence polymorphisms between teh two genomes based on reciprocal short read mapping and whole genome alignments. The variable regions are then explored to see the genes contained within these low coverage or no coverage regions. These are the regions unique to one genome vs. the others. It looks at genes and at TEs and preforms permutation tests for both. This takes the input of the following other notebooks `DK0911_SRM_cov_DK0911_on_DK0911`, `Pst_104E_SRM_cov_Pst_104E_on_Pst_104E`, `DK0911_SRM_cov_Pst_104E_on_DK0911`, `Pst_104E_SRM_cov_Pst_104E_on_Pst_104E`, and `Mummer_DK0911_Pst_104E`.
 
 ## Genome Versions
 ### genome_v01
