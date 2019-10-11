@@ -88,10 +88,10 @@ Lab Group: Rathjen Lab, Research School of Biology
    - This notebook explores the presence absence polymorphisms between teh two genomes based on reciprocal short read mapping and whole genome alignments. The variable regions are then explored to see the genes contained within these low coverage or no coverage regions. These are the regions unique to one genome vs. the others. It looks at genes and at TEs and preforms permutation tests for both. This takes the input of the following other notebooks `DK0911_SRM_cov_DK0911_on_DK0911`, `Pst_104E_SRM_cov_Pst_104E_on_Pst_104E`, `DK0911_SRM_cov_Pst_104E_on_DK0911`, `Pst_104E_SRM_cov_Pst_104E_on_Pst_104E`, and `Mummer_DK0911_Pst_104E`.
    
 16. `DK0911_vs_Pst104E_reciprocal_gene_pair_analysis`
-   - This notebook explores the reciprocal gene pair analysis between the two isolates and caclualtes a set of different statistics for each gene pair including Levensthein distances and dN/dS ratios. It generates Figure 4. 
+   - This notebook explores the reciprocal gene pair analysis between the two isolates and caclualtes a set of different statistics for each gene pair including Levensthein distances and dN/dS ratios. It generates Figure 4. Takes input from `Pst104E_vs_DK0911_synteny` and `DK0911_vs_Pst104E_synteny`.
 
 17. `DK0911v04_Pst104E_presence_absence_orthology` 
-   - This notebook explores the presence absence polymorphisms between the two isolates based on Orthofinder define gene families (Orthogroups). It does several statistical tests for enrichment of certain gene groups in the presence absence gene. It also pulls in the synteny analysis by MCScanX and identifies genes within synteny blocks at different gap sizes and the maximal synteny block for genes. This notebooks generates Figure 5.
+   - This notebook explores the presence absence polymorphisms between the two isolates based on Orthofinder define gene families (Orthogroups). It does several statistical tests for enrichment of certain gene groups in the presence absence gene. It also pulls in the synteny analysis by MCScanX and identifies genes within synteny blocks at different gap sizes and the maximal synteny block for genes. This notebooks generates Figure 5.Takes input from `Pst104E_vs_DK0911_synteny` and `DK0911_vs_Pst104E_synteny`.
 
 ## Genome Versions
 ### genome_v01
