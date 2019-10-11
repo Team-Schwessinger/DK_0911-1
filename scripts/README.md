@@ -6,7 +6,7 @@ Supervisor: **Dr Benjamin Schwessinger**
 
 Lab Group: Rathjen Lab, Research School of Biology
 
-## Scripts - in running order
+## Scripts - in semi running order
 1. `DK_0911_contig_analysis`
    - Inputs: v01 (original) .*fasta* files
    - Programs: **NUCmer** & **MUMmer** (alignment of nucleotide sequences)
@@ -27,6 +27,8 @@ Lab Group: Rathjen Lab, Research School of Biology
    - Programs: **NUCmer** (alignment) & **Assemblytics** (detection of variants)
    - Purpose: extract meaningful data pertaining to variants in the genome to be further analysed in `DK_0911_assemblytics_analysis`
    - Notes: added bug-catching function that checks if mapping folders contain all the analytical files that they should, using a notebook `file_counting.ipynb` that can also be imported by other notebooks.
+ `DK_0911_Pst104E_assemblytics_plot`
+   - This notebook generates the combined assemblytics analysis as shown in Figure 1. 
 5. `DK_0911_assemblytics_analysis`
    - Inputs: outputs from `DK_0911_nucmer_and_assemblytics_mapping`
    - Programs: N/A
@@ -67,7 +69,20 @@ Lab Group: Rathjen Lab, Research School of Biology
    - Inputs: **BLAST** & **transposonPSI** DataFrames, .*gff3* files.
    - Programs: N/A
    - Purpose: generate new *gff3* files without transposable elements. After this, re-run code from step 6. `DK_0911_generate_fasta_files_from_gff3` onwards.
-10. `
+10. `DK0911_TE_filtering_and_summary_p_contigs_fix.ipynb, DK0911_TE_filtering_and_summary_h_contigs_fix.ipynb, Pst_104E_v14_TE_filtering_and_summary_p_contigs_fix.ipynb, Pst_104E_v13_TE_filtering_and_summary_h_contigs_fix.ipynb`
+   - TO-DO description
+11. `DK0911_TE_variation_analysis.ipynb`
+   - TO-DO description
+   
+12. `Scripts in protein_annotation`
+   - TO-DO
+   
+13. `DK0911_vs_Pst104E_gene_pair_analysis`
+   - This notebooks describes the comparative gene pair analysis. The inputs are the outputs of `DK_0911_defining_alleles_v02`, `DK_0911_post_allele_analysis_v02` `Pst_104E_defining_alleles_v02_RT`, and `Pst_104E_defining_alleles_v02_RT`.
+   These previous notebooks describe the assignment of alleles and the caculation of different pairwise measures including Levensthein distances and dN/dS ratios.
+
+14. `DK0911_Pst104E_comperative_coverage_analysis`
+   - This notebook plots Figure 2 representing the relative fully phased, homozygous collapsed, and hemizygous regions. It takes the input of `DK0911_SRM_cov_DK0911_on_DK0911` and `Pst_104E_SRM_cov_Pst_104E_on_Pst_104E`
 
 ## Genome Versions
 ### genome_v01
