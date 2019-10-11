@@ -92,6 +92,9 @@ Lab Group: Rathjen Lab, Research School of Biology
 
 17. `DK0911v04_Pst104E_presence_absence_orthology` 
    - This notebook explores the presence absence polymorphisms between the two isolates based on Orthofinder define gene families (Orthogroups). It does several statistical tests for enrichment of certain gene groups in the presence absence gene. It also pulls in the synteny analysis by MCScanX and identifies genes within synteny blocks at different gap sizes and the maximal synteny block for genes. This notebooks generates Figure 5.Takes input from `Pst104E_vs_DK0911_synteny` and `DK0911_vs_Pst104E_synteny`.
+   
+18. `DK0911_v04_effector_analysis`
+   - This notebook generates Supplemental Figure 6 with identical analysis published in mBio https://mBio.asm.org/content/9/1/e02275-17.
 
 ## Genome Versions
 ### genome_v01
