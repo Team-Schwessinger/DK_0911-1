@@ -70,12 +70,12 @@ Lab Group: Rathjen Lab, Research School of Biology
    - Programs: N/A
    - Purpose: generate new *gff3* files without transposable elements. After this, re-run code from step 6. `DK_0911_generate_fasta_files_from_gff3` onwards.
 10. `DK0911_TE_filtering_and_summary_p_contigs_fix.ipynb, DK0911_TE_filtering_and_summary_h_contigs_fix.ipynb, Pst_104E_v14_TE_filtering_and_summary_p_contigs_fix.ipynb, Pst_104E_v13_TE_filtering_and_summary_h_contigs_fix.ipynb`
-   - TO-DO description
+   - These scripts are based on the Pst104E analysis published in mBio (Schwessinger et al. 2019) and summarise the TE analysis provided by the REPET pipeline.
 11. `DK0911_TE_variation_analysis.ipynb`
-   - TO-DO description
+   - This notebook summarises the TE variation within DK0911 based on outputs from the REPET pipeline. It aims to explore the relavtive divergence of TE copies from their consensus sequence.
    
 12. `Scripts in protein_annotation`
-   - TO-DO
+   - These are some support scripts for the protein annotation.
    
 13. `DK0911_vs_Pst104E_gene_pair_analysis`
    - This notebooks describes the comparative gene pair analysis. The inputs are the outputs of `DK_0911_defining_alleles_v02`, `DK_0911_post_allele_analysis_v02` `Pst_104E_defining_alleles_v02_RT`, and `Pst_104E_defining_alleles_v02_RT`.
