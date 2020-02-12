@@ -21,6 +21,7 @@ import scipy
 from pybedtools import BedTool
 
 
+
 def run_command(command):
     print('\nRunnning now!\n')
     print(command)
@@ -41,7 +42,7 @@ def faidx_genome(genome_fn, contig_fn):
     Abspath filename of output genome_file.
     Abspath filename for genome contig file.'''
     if not os.path.exists(genome_fn):
-        sammtools_command = 'samtools faidx %s' % contig_fn
+        samtools_command = 'samtools faidx %s' % contig_fn
         run_command(samtools_command)
         genome_file_command = 'cat %s.fai | sort -k1,1n | cut -f 1,2 > %s' %(contig_fn, genome_fn)
         run_command(genome_file_command)
@@ -69,6 +70,10 @@ def bed_file_split(bed_fn, num_chunks, tmp_path):
     tmp_path where the split files get saved into.
     Returns:
     List of abspath filenames for split bed files.'''
+    TMP_PATH = os.path.join(os.path.dirname(bed_fn),'tmp')
+    if not os.path.exists(TMP_PATH):
+        os.makedirs(TMP_PATH)
+    
     infilename = bed_fn
     number_of_lines = 0
     with open(infilename, 'rb') as infile:
@@ -139,9 +144,16 @@ def run_sam_bedcov(bed_fn, bam_fn, samcov_fn, parallel = False):
         Option to run thinks in parllel. Set to False. Provide the number of threads you want to run -1.
     Output:
         It generate the samcov files and saves them to file."""
+    TMP_PATH = os.path.join(os.path.dirname(bed_fn),'tmp')
+    if not os.path.exists(TMP_PATH):
+        os.makedirs(TMP_PATH)
+    
+    
     command = 'samtools bedcov %s %s > %s' % (bed_fn, bam_fn, samcov_fn)
     if parallel != False and type(parallel) == int:
-        split_bed_files = bed_file_split(bed_fn, parallel)
+        
+        split_bed_files = bed_file_split(bed_fn, parallel,tmp_path=TMP_PATH)
+        
         split_samcov_files = samcov_file_split(samcov_fn, len(split_bed_files), tmp_path=TMP_PATH)
         bam_files = [bam_fn]*len(split_bed_files)
         n_threads = len(split_bed_files)
