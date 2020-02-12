@@ -99,6 +99,12 @@ Lab Group: Rathjen Lab, Research School of Biology
 19. `DK0911_tables_and_subfigures`
    - This notebook is a general utility notebook that helps generating some figures.
 
+20. `20200129_genome_size_revision_v01`
+   - This notebook is part of the first revision and uses public SRA data to generate k-mer profiles with jellyfish to be inputed online into GenomeScope2.  
+   
+21. `20200129_het_cov_revision_v01`
+   - This notebook is part of the first revision and uses public SRA and corresponding genome data to generated coverage plots of primary contig mapping to indentify hemizygous regions.
+
 ## Genome Versions
 ### genome_v01
 * Original genome.
